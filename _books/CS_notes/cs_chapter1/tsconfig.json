@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",
+    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    /* Modules */
+    "module": "CommonJS",
+    /* Specify what module code is generated. */
+
+    /* JavaScript Support */
+    "allowJs": true,
+    /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,
+    // 윈도우는 대문자 소문자를 구분하지 않는데, 리눅스, 맥은 대소문자를 구분하도록 import 가능하게 만들어놓음
+    /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,
+    /* Enable all strict type-checking options. */
+
+    /* Completeness */
+    "skipLibCheck": true
+    // 라이브러리 체크를 무시해라
+    // .d.ts 그 프로젝트의 타입을 확인할 수 있도록 하는 것
+    // 안쓸것들은 검사하지 마라 라는 뜻
+    /* Skip type checking all .d.ts files. */
+  },
+  "exclude": [
+    "*"
+  ]
+  // 파일들을 개별 프로젝트로 인식합니다.
+}
