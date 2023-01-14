@@ -285,7 +285,7 @@
 
 여기서, 주체와 객체를 따로 두지않고, 상태가 변경되는 객체를 기반으로 패턴을 구축하기도 합니다.
 
-주로 **분산 이벤트 핸들링 시스템**을 구현하거나 **발행/구독(Pub/Sub)** 모델에서 많이 사용됩니다.
+주로 **분산 이벤트 핸들링 시스템**을 구현하거나 발행/구독(Pub/Sub) 모델에서 많이 사용됩니다.
 → 여기서 발행/구독(Pub/Sub)모델은 대표적으로 [MQTT 프로토콜](https://mqtt.org/)을 이용하는 [Rabbit MQ](https://www.rabbitmq.com/tutorials/tutorial-one-javascript.html)에서 사용됩니다.
 
 - **📝  Topic을 이용한 Pub/Sub 옵저버 패턴 구현**
@@ -392,8 +392,8 @@
 
   > **프록시(Proxy) 객체**는 어떠한 대상의 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 호출 등)의 작업을 가로챌 수 있는 객체이며, Javascript에서 프록시 객체는 `target`, `handler`두 개의 매개변수를 가진다.
   >
-    - `target`: 프록시 할 대상을 가리킵니다.
-    - `handler`: 프록시 객체의 `target` 동작을 가로채서 정의할 동작들이 정해져 있는 함수입니다.
+  - `target`: 프록시 할 대상을 가리킵니다.
+  - `handler`: 프록시 객체의 `target` 동작을 가로채서 정의할 동작들이 정해져 있는 함수입니다.
 
     ```tsx
     const handler = {
@@ -414,7 +414,7 @@
 - **❓ 프록시(Proxy) 서버란?**
 
   > 프록시 서버(Proxy Server)는 서버와 클라이언트 사이에서 클라이언트가 자신을 통해 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해주는 시스템이나 응용 프로그램을 가리킨다.
-  >
+>
 - **📝  프록시(Proxy) 객체를 이용한 옵저버 패턴 구현**
 
     ```jsx
@@ -496,9 +496,9 @@
 
   `Map`과 `Set`을 각각 `mapObject`, `setObject` 변수에 할당하였습니다.
 
-  두 변수에 할당된 자료형식은 각각 다르지만 `for … of`문 이라는 **[이터레이터 프로토콜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)**을 통해 같은 방식으로 반복문을 순회하는 것을 확인 할 수 있습니다.
+  두 변수에 할당된 자료형식은 각각 다르지만 `for … of`문 이라는 [이터레이터 프로토콜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)을 통해 같은 방식으로 반복문을 순회하는 것을 확인 할 수 있습니다.
 
-  → **[이터레이터 프로토콜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)**은 **[이터러블(Iterable)한 객체](https://ko.javascript.info/iterable)들을 순회할 때 쓰이는 규칙**입니다.
+  → [이터레이터 프로토콜](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)은 **[이터러블(Iterable)한 객체](https://ko.javascript.info/iterable)들을 순회할 때 쓰이는 규칙**입니다.
 
 
 ## 노출모듈 패턴(Revealing Module Pattern)
@@ -510,7 +510,7 @@
 
 그렇기 때문에 노출모듈 패턴을 통해 **priavate**, **public** 과 같은 접근 제어자를 구현합니다.
 
-이런 방식으로 구현한 접근 제한 방식은 **[클로저(Closure)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)**라고 부릅니다.
+이런 방식으로 구현한 접근 제한 방식은 [클로저(Closure)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)라고 부릅니다.
 
 - **📝  Javascript의 클로저(Closure)를 이용한 노출모듈 패턴 구현**
 
@@ -580,15 +580,15 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 - ❓ **뷰모델(View Model)이란?**
 
   > 뷰모델(View Model)은 뷰(View)를 더욱 추상화 한 계층입니다.
-  >
+>
 - ❓ **커맨드(Command)란?**
 
   > 커맨드(Command)는 여러 가지 요소에 대한 처리를 하나의 액션으로 처리할 수 있게 하는 기법입니다.
-  >
+>
 - ❓ **데이터 바인딩(Data Binding)이란?**
 
   > 데이터 바인딩(Data Binding)은 화면에 보이는 데이터와 웹 브라우저의 메모리 데이터를 일치시키는 기법으로, 뷰모델을 변경하면 뷰가 변경됩니다.
-  >
+>
 
 # 프로그래밍 패러다임
 
@@ -645,21 +645,21 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
   > 고차 함수(Higher Order Function)란 함수가 함수를 값(Value)처럼 매개변수로 받아 로직을 생성할 수 있는 것을 나타낸다.
   >
 
-  고차 함수를 사용하기 위해서는 해당 언어가 **[일급 객체(First-Class Object)](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)**의 특성을 가져야한다.
+  고차 함수를 사용하기 위해서는 해당 언어가 [일급 객체(First-Class Object)](https://ko.wikipedia.org/wiki/%EC%9D%BC%EA%B8%89_%EA%B0%9D%EC%B2%B4)의 특성을 가져야한다.
 
-- ❓  **일급 객체(First-Class Object)**란?
+- ❓  일급 객체(First-Class Object)란?
 
-  > **일급 객체(First-Class Object)**는 아래와 같은 특징을 가져야한다.
+  > 일급 객체(First-Class Object)는 아래와 같은 특징을 가져야한다.
   >
-    1. 변수나 메서드에 함수를 할당할 수 있습니다.
-    2. 함수 안에 함수를 매개변수로 담을 수 있습니다.
-    3. 함수가 함수를 반환할 수 있습니다.
+  1. 변수나 메서드에 함수를 할당할 수 있습니다.
+  2. 함수 안에 함수를 매개변수로 담을 수 있습니다.
+  3. 함수가 함수를 반환할 수 있습니다.
 
 
 ## 객체지향 프로그래밍(Object-Oriented Programming)
 
-> **객체지향 프로그래밍(Object-Oriented Programming)**은 객체들의 집합으로 프로그램의 상호 작용을 표현하며 데이터를 객체로 취급하여 객체 내부에 선언된 메서드를 활용하는 방식이다.
-  >
+> 객체지향 프로그래밍(Object-Oriented Programming)은 객체들의 집합으로 프로그램의 상호 작용을 표현하며 데이터를 객체로 취급하여 객체 내부에 선언된 메서드를 활용하는 방식이다.
+>
 
 - **객체지향 프로그래밍의 대표적인 특징**
 
@@ -682,7 +682,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 
   > 다형성(Polymorphism)은 하나의 메서드나 클래스가 다양항 방법으로 동작하는 것이다.
   대표적으로 **오버로딩(Overloading),** 오버라이딩(Overriding)이 존재한다.
-  >
+>
 
 - 객체지향 프로그래밍의 설계 원칙 (SOLID)
 
@@ -693,7 +693,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 
   ### 개방-폐쇄 원칙(OCP, Open Closed Principle)
 
-  > **개방-폐쇄 원칙(OCP, Open Closed Principle)**은 유지 보수 사항이 생긴다면 코드를 쉽게 확장할 수 있도록 하고, 수정할때는 닫혀 있어야 한다는 원칙이다.
+  > 개방-폐쇄 원칙(OCP, Open Closed Principle)은 유지 보수 사항이 생긴다면 코드를 쉽게 확장할 수 있도록 하고, 수정할때는 닫혀 있어야 한다는 원칙이다.
   >
 
   ### 리스코프 치환 원칙(LSP, Liskov Substitution Principle)
@@ -709,7 +709,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
   ### 의존 역전 원칙(DIP, Dependency Inversion Principle)
 
   > 의존 역전 원칙(DIP, Dependency Inversion Principle)은 자신보다 변하기 쉬운 것에 의존하던것을 추상화된 인터페이스나 상위 클래스를 두어 변하기 쉬운 것의 영향받지 않게 하는 원칙이다.
-  >
+>
 
 - **📝  Javascript Class를 이용한 객체지향 프로그래밍 예시**
 
@@ -800,7 +800,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 ## 절차형 프로그래밍(Procedural Programming)
 
 > 절차형 프로그래밍(Procedural Programming)은 로직이 수행되어야할 연속적인 연산 과정으로 이루어져 있고, 일이 진행되는 방식을 코드로 구현하므로 코드의 가독성과 실행 속도가 빠르다.
-  >
+>
 
 - **📝  Javascript로 구현한 절차형 프로그래밍**
 
