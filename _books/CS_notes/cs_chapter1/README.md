@@ -414,7 +414,7 @@
 - **❓ 프록시(Proxy) 서버란?**
 
   > 프록시 서버(Proxy Server)는 서버와 클라이언트 사이에서 클라이언트가 자신을 통해 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해주는 시스템이나 응용 프로그램을 가리킨다.
->
+  >
 - **📝  프록시(Proxy) 객체를 이용한 옵저버 패턴 구현**
 
     ```jsx
@@ -580,15 +580,15 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 - ❓ **뷰모델(View Model)이란?**
 
   > 뷰모델(View Model)은 뷰(View)를 더욱 추상화 한 계층입니다.
->
+  >
 - ❓ **커맨드(Command)란?**
 
   > 커맨드(Command)는 여러 가지 요소에 대한 처리를 하나의 액션으로 처리할 수 있게 하는 기법입니다.
->
+  >
 - ❓ **데이터 바인딩(Data Binding)이란?**
 
   > 데이터 바인딩(Data Binding)은 화면에 보이는 데이터와 웹 브라우저의 메모리 데이터를 일치시키는 기법으로, 뷰모델을 변경하면 뷰가 변경됩니다.
->
+  >
 
 # 프로그래밍 패러다임
 
@@ -659,7 +659,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 ## 객체지향 프로그래밍(Object-Oriented Programming)
 
 > 객체지향 프로그래밍(Object-Oriented Programming)은 객체들의 집합으로 프로그램의 상호 작용을 표현하며 데이터를 객체로 취급하여 객체 내부에 선언된 메서드를 활용하는 방식이다.
->
+  >
 
 - **객체지향 프로그래밍의 대표적인 특징**
 
@@ -682,7 +682,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 
   > 다형성(Polymorphism)은 하나의 메서드나 클래스가 다양항 방법으로 동작하는 것이다.
   대표적으로 **오버로딩(Overloading),** 오버라이딩(Overriding)이 존재한다.
->
+  >
 
 - 객체지향 프로그래밍의 설계 원칙 (SOLID)
 
@@ -709,7 +709,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
   ### 의존 역전 원칙(DIP, Dependency Inversion Principle)
 
   > 의존 역전 원칙(DIP, Dependency Inversion Principle)은 자신보다 변하기 쉬운 것에 의존하던것을 추상화된 인터페이스나 상위 클래스를 두어 변하기 쉬운 것의 영향받지 않게 하는 원칙이다.
->
+  >
 
 - **📝  Javascript Class를 이용한 객체지향 프로그래밍 예시**
 
@@ -800,7 +800,7 @@ MVVM 패턴(Model, View, ViewModel Pattern)은 커맨드와 데이터 바인딩�
 ## 절차형 프로그래밍(Procedural Programming)
 
 > 절차형 프로그래밍(Procedural Programming)은 로직이 수행되어야할 연속적인 연산 과정으로 이루어져 있고, 일이 진행되는 방식을 코드로 구현하므로 코드의 가독성과 실행 속도가 빠르다.
->
+  >
 
 - **📝  Javascript로 구현한 절차형 프로그래밍**
 
