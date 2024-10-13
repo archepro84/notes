@@ -1,0 +1,17 @@
+{
+  "name": "create-opensearch-repository",
+  "version": "1.0.0",
+  "description": "## 개요 OpenSearch Repository는 보안 문제로 인해, `curl` 명령어 및 `console`에서 생성할 수 없습니다. 그로인해, 별도의 생성 라이브러리가 필요하며, 해당 스크립트를 통해, OpenSearch Repository를 생성할 예정입니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws4": "^1.13.2",
+    "dotenv": "^16.4.5",
+    "https": "^1.0.0"
+  }
+}
