@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: get-s3-aws-sdk
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: get-s3-aws-sdk-pod
+  template:
+    metadata:
+      labels:
+        app: get-s3-aws-sdk-pod
+    spec:
+      serviceAccountName: get-s3-sa
+      containers:
+        - image: archepro84/get-s3-aws-sdk:latest
+          imagePullPolicy: Always # Debug Image Pull Policy
+          name: get-s3-aws-sdk-container
+          resources:
+            requests:
+              cpu: 250m
+              memory: 200Mi
