@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sasl-app
+  name: sasl-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sasl-app
+  template:
+    metadata:
+      labels:
+        app: sasl-app
+    spec:
+      serviceAccountName: msk-sasl-sa
+      containers:
+        - image: archepro84/msk-sasl-sts:latest
+          name: msk-sasl-sts
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            initialDelaySeconds: 15 # wait for 15 seconds before first probe
+            periodSeconds: 10 # probe every 10 seconds
+            httpGet:
+              port: 3000
+          readinessProbe:
+            initialDelaySeconds: 15 # wait for 15 seconds before first probe
+            periodSeconds: 10 # probe every 10 seconds
+            httpGet:
+              port: 3000
+          env:
+            - name: KAFKA_BROKERS
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_BROKERS
+            - name: KAFKA_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_CLIENT_ID
+            - name: KAFKA_CONSUMER_GROUP_ID
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_CONSUMER_GROUP_ID
+            - name: KAFKA_CONSUME_TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_CONSUME_TOPIC
+            - name: KAFKA_PRODUCE_TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_PRODUCE_TOPIC
+            - name: KAFKA_ENABLE_MSK
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_ENABLE_MSK
+            - name: KAFKA_MSK_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: sasl-app-secret
+                  key: KAFKA_MSK_REGION
+
